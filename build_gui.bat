@@ -1,0 +1,21 @@
+@echo off
+g++ ^
+  -Iincludes ^
+  -Iexternal/imgui ^
+  -Iexternal/imgui/backends ^
+  -Iexternal/glfw/include ^
+  -Iexternal/glad/include ^
+  gui_main.cpp ^
+  src/Vehicle.cpp ^
+  src/Position.cpp ^
+  external/imgui/imgui.cpp ^
+  external/imgui/imgui_draw.cpp ^
+  external/imgui/imgui_tables.cpp ^
+  external/imgui/imgui_widgets.cpp ^
+  external/imgui/imgui_demo.cpp ^
+  external/imgui/backends/imgui_impl_glfw.cpp ^
+  external/imgui/backends/imgui_impl_opengl3.cpp ^
+  external/glad/src/glad.c ^
+  -Lexternal/glfw/lib ^
+  -lglfw3 -lgdi32 -lopengl32 ^
+  -o gui_app.exe
